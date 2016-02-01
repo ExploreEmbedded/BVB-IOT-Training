@@ -7,7 +7,7 @@
 #include <WiFiClient.h>
 #include <PubSubClient.h>
 
-char* mqttserver = "starling.exploreembedded.com";  
+char* mqttserver = "starling.exploreembedded.com"; // hide this after training 
 char message_buff[300];   // initialise storage buffer (i haven't tested to this capacity.)
 char respBuffer[300];
 char charBuf[50];
@@ -74,7 +74,7 @@ void loop() {
            delay(1000);
            //client name and topic are kept the same. 
            Serial.println("NW_connecting_to_Starling_Server");
-           if(client.connect(getClientName(),"starling","masterexplorer")) // device id, user id, password
+           if(client.connect(getClientName(),"starling","masterexplorer")) // device id, user id, password //hide user name password
             {
                Serial.println("NW_Conected");
                //client.publish("STAR0001","Starling is flying");
